@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../assets/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../../assets/fonts/Roboto-Regular.ttf");
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button,
+[type=button],
+[role=button] {
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:root {
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-7: 1.75rem;
+  --size-8: 2rem;
+  --size-9: 2.25rem;
+  --size-10: 2.5rem;
+  --size-11: 2.75rem;
+  --size-12: 3rem;
+  --size-13: 3.25rem;
+  --size-14: 3.5rem;
+  --size-15: 3.75rem;
+  --size-16: 4rem;
+  --size-17: 4.25rem;
+  --size-18: 4.5rem;
+  --size-19: 4.75rem;
+  --size-20: 5rem;
+  --size-21: 5.25rem;
+  --size-22: 5.5rem;
+  --size-23: 5.75rem;
+  --size-24: 6rem;
+  --size-25: 6.25rem;
+  --size-26: 6.5rem;
+  --size-27: 6.75rem;
+  --size-28: 7rem;
+  --size-29: 7.25rem;
+  --size-30: 7.5rem;
+  --size-31: 7.75rem;
+  --size-32: 8rem;
+  --size-33: 8.25rem;
+  --size-34: 8.5rem;
+  --size-35: 8.75rem;
+  --size-36: 9rem;
+  --tomato: 4 100% 67%;
+  --dark-slate-grey: 234 29% 20%;
+  --charcoal-grey: 235 18% 26%;
+  --grey: 231 7% 60%;
+  --white: 0 0% 100%;
+  --tomato-clr: hsl(var(--tomato));
+  --dark-slate-grey-clr: hsl(var(--dark-slate-grey));
+  --charcoal-grey-clr: hsl(var(--charcoal-grey));
+  --grey-clr: hsl(var(--grey));
+  --white-clr: hsl(var(--white));
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--charcoal-grey-clr);
+  color: hsl(var(--dark-slate-grey));
+  font-family: "Roboto Regular";
+}
+@media (width > 768px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Bold";
+}
+
+main {
+  max-width: 930px;
+  min-height: 100vh;
+}
+@media (width > 768px) {
+  main {
+    display: grid;
+    place-content: center;
+    min-height: auto;
+  }
+}
+
+.button {
+  margin-top: 0.5rem;
+  background: var(--dark-slate-grey-clr);
+  color: var(--white-clr);
+  padding: var(--size-4);
+  border-radius: var(--size-2);
+}
+.button:hover {
+  background: linear-gradient(90deg, #ff5a66, #ff9142);
+}
+
+section {
+  background-color: hsl(var(--white));
+}
+@media (width > 768px) {
+  section {
+    border-radius: var(--size-8);
+  }
+}
+
+.success {
+  display: none;
+}
+
+.signup {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr;
+}
+@media (width > 768px) {
+  .signup {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    min-height: auto;
+    padding: var(--size-6);
+  }
+}
+.signup-img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+.signup-content {
+  padding: var(--size-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-5);
+  height: 100%;
+}
+@media (width > 768px) {
+  .signup-content {
+    order: -1;
+    justify-content: center;
+    gap: var(--size-8);
+  }
+}
+.signup-content .heading {
+  font-size: var(--size-10);
+  line-height: 1;
+}
+@media (width > 768px) {
+  .signup-content .heading {
+    font-size: var(--size-14);
+    line-height: 1.15;
+  }
+}
+.signup-content .benefits-list {
+  list-style: none;
+  padding-left: 0;
+}
+.signup-content .benefits-list > * + * {
+  margin-top: var(--size-2);
+}
+.signup-content .benefits-list li {
+  display: flex;
+  gap: 1rem;
+}
+.signup-content .benefits-list li::before {
+  content: url("../../assets/images/icon-list.svg");
+}
+.signup-content .form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-weight: 500;
+  position: relative;
+}
+@media (width > 768px) {
+  .signup-content .form {
+    flex-grow: 0;
+  }
+}
+.signup-content .form label {
+  font-size: 0.75em;
+  font-family: "Roboto Bold";
+}
+.signup-content .form input {
+  margin-top: var(--size-2);
+  border-radius: var(--size-2);
+  padding: var(--size-4) var(--size-6);
+  border: 1px solid hsl(var(--grey)/0.5);
+}
+.signup-content .form input:not(:placeholder-shown):invalid {
+  outline: 1px solid hsl(var(--tomato));
+  background-color: hsl(var(--tomato)/0.3);
+  color: var(--tomato-clr);
+}
+.signup-content .form input:not(:placeholder-shown):invalid + .input-error {
+  scale: 1;
+  opacity: 1;
+}
+.signup-content .form input:focus, .signup-content .form input:hover {
+  border-color: var(--dark-slate-grey-clr);
+}
+.signup-content .form .input-error {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.75em;
+  font-weight: 500;
+  font-family: "Roboto Bold";
+  color: var(--tomato-clr);
+  scale: 0;
+  opacity: 0;
+}
+
+body[data-success=true] .signup {
+  display: none;
+}
+body[data-success=true] .success {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-5);
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--size-6);
+}
+@media (width > 768px) {
+  body[data-success=true] .success {
+    min-height: auto;
+    padding: var(--size-12);
+    aspect-ratio: 1;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
+body[data-success=true] .success-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  gap: var(--size-6);
+}
+body[data-success=true] .success img {
+  width: clamp(var(--size-16), 13vw, var(--size-20));
+}
+@media (width > 768px) {
+  body[data-success=true] .success img {
+    width: var(--size-12);
+  }
+}
+body[data-success=true] .success .heading {
+  font-size: var(--size-10);
+  line-height: 1.15;
+}
+@media (width > 768px) {
+  body[data-success=true] .success .heading {
+    font-size: var(--size-12);
+  }
+}
+body[data-success=true] .success .text {
+  max-width: 40ch;
+}
+
+/*# sourceMappingURL=style.css.map */
